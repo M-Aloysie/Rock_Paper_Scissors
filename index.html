@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Rock Paper Scissors</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet"  href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Rock Paper Scissors Game</h1>
-    <div id="start-game">
-      <button class="start-button">Start Game</button>
+  <div id="game-page">
+    <h1>Rock Paper Scissors</h1>
+    <div id="game-description">
+      <p>Welcome to the Rock Paper Scissors game! Choose your move by clicking on one of the buttons below. Try to beat the computer by selecting the correct move that can defeat its choice. The game consists of 5 rounds. After the 5th round, the winner will be determined based on the total score. Good luck!</p>
     </div>
-    <div id="game-area" style="display: none;">
-      <div class="choices">
-        <button class="btn" id="rock">Rock</button>
-        <button class="btn" id="paper">Paper</button>
-        <button class="btn" id="scissors">Scissors</button>
-      </div>
-      <div class="result">
-        <p id="round-result"></p>
-        <p id="game-result"></p>
-      </div>
+    <div id="start-page">
+      <button id="start-button">Start the Game</button>
     </div>
+
+    <div id="choices" style="display: none;">
+      <button class="choice" id="rock">Rock</button>
+      <button class="choice" id="paper">Paper</button>
+      <button class="choice" id="scissors">Scissors</button>
+    </div>
+
+    <div id="score" style="display: none;">
+      <h2>Score</h2>
+      <p id="player-score">Player: 0</p>
+      <p id="computer-score">Computer: 0</p>
+    </div>
+
+    <table id="results-table" style="display: none;">
+      <thead>
+        <tr>
+          <th>Round</th>
+          <th>Your Choice</th>
+          <th style="padding-left: 20px;">Computer's Choice</th>
+          <th style="padding-left: 20px;">Result</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="winner" style="display: none;"></div>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
